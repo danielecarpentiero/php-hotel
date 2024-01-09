@@ -58,16 +58,19 @@
     </tr>
   </thead>
   <tbody>
-    
-  </tbody>
-    </table>
-    <?php
+    <?php 
     foreach ($hotels as $hotel){
-        echo $hotel['name'];
-        echo $hotel['description'];
-        echo $hotel['vote'];
-        echo $hotel['distance_to_center'];
+        ?>
+        <tr>
+            <td><?php echo $hotel['name']?></td>
+            <td><?php echo $hotel['description']?></td>
+            <td><?php echo $hotel['parking'] ? 'si' : 'no' ?></td>
+            <td><?php echo $hotel['vote']?></td>
+            <td><?php echo $hotel['distance_to_center']?></td>
+        </tr>
+        <?php
     }
     ?>
+  </tbody>
 </body>
 </html>
