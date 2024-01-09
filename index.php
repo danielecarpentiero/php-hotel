@@ -1,7 +1,5 @@
 <?php
-
     $hotels = [
-
         [
             'name' => 'Hotel Belvedere',
             'description' => 'Hotel Belvedere Descrizione',
@@ -37,9 +35,7 @@
             'vote' => 2,
             'distance_to_center' => 50
         ],
-
     ];
-
 ?>
 
 <!DOCTYPE html>
@@ -47,9 +43,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>PHP Hotel</title>
 </head>
 <body>
+    <table class="table container">
+    <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Descrizione</th>
+      <th scope="col">Parcheggio</th>
+      <th scope="col">Voto</th>
+      <th scope="col">Distanza dal centro (km)</th>
+    </tr>
+  </thead>
+  <tbody>
     
+  </tbody>
+    </table>
+    <?php
+    foreach ($hotels as $hotel){
+        echo $hotel['name'];
+        echo $hotel['description'];
+        echo $hotel['vote'];
+        echo $hotel['distance_to_center'];
+    }
+    ?>
 </body>
 </html>
